@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" src="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+.carousel-fade .carousel-inner .item {
+	opacity: 0;
+	-webkit-transition-property: opacity;
+	transition-property: opacity;
+	transition-duration:0.5s;
+}
+.carousel-fade .carousel-inner .active {
+	opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right {
+	left: 0;
+	opacity: 0.4;
+	z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right {
+	opacity: 1;
+}
+.carousel-fade .carousel-control {
+	z-index: 2;
+}
+    .carousel-control.right{
+        background:none;
+    }
+    html
+    {height:100%;
+        margin:0;
+        overflow:hidden;
+    }
+    body
+    {   margin:0;
+        height:100%;
+    }
+    
+    header{
+   
+        height:100%;
+    }
+    
+    .image1 {
+  background-image: url("http://wallpapercave.com/wp/E0z7vJl.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+ .image2 {
+  background-image: url("http://wallpapercave.com/wp/E0z7vJl.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+    .carousel-indicators{
+        display:none;
+    }
+    .carousel-control:active{background:transparent;}
+    .carousel-control:hover{background:transparent;}
+
+    #myCarousel{
+      
+    }
+   *{
+  	box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+	}
+	body{
+	  font-family: Verdana, Geneva, sans sarif;
+	}
+	a{
+	  text-decoration:none;
+	}
+	.nav-bar{
+	 position:fixed;top:0px;
+        z-index:33;
+	  width: 100%;
+	}
+	.nav-hold{
+	  display:block;
+	  width: 90%;
+	}
+	.nav-logo{
+	  float: left;
+	  display: block;
+	  padding: 30px 0px 20px 20px;
+	  font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+	}
+	.nav-logo a{
+	  color: #1c1c1c;
+        
+	}
+	.nav-items{
+	  float: right;
+	}
+	.nav-items >li{
+	  display:block;
+	  float: left;
+	  padding: 30px 0px 20px 20px;
+	  margin-left:10px;
+     text-transform: uppercase;
+	}
+	.nav-items li a:first-of-type {
+     background:#262525;       
+     padding:5px;
+     color: white;
+     font-weight:1000;
+      opacity:0.4;
+	}
+    
+   #social  a{
+       
+        background:none;       
+     padding:0px; 
+    }
+     
+   #social  img{
+              
+opacity:0.6;
+    }
+    #social  img:hover{
+    transform: scale(1.02);
+opacity:1;
+    }
+    
+    
+	.nav-items li a:hover {
+	  opacity:0.9;
+   text-decoration:none;
+        font-weight:1000;
+	}
+   
+    .nav-items li a:visited{
+	  opacity:0.9;
+   text-decoration:none;
+        font-weight:1000;
+	}
+	.nav-hold{
+	  overflow:hidden;
+	}
+	.nav-menu{
+        margin-top:-20px;
+	  display: none;
+	}
+	/*media Queries*/
+	@media screen and (max-width: 800px){
+        
+        
+   
+		.nav-menu {
+		  display: block;
+		  float: right;
+		  padding: 30px 0px 20px 20px;
+		  cursor: pointer;
+		  color: black;
+		}
+        .nav-items li{
+	 width:140%;
+            
+         
+	  float: left;
+	  padding: 5px 0px 20px 20px;
+	 
+     text-transform: uppercase;
+	}
+        .nav-items .nav-open{
+            width:100%;
+        }
+        
+        .nav-items li a{
+            color:black;
+            font-weight:bold;
+            padding:auto;
+            background:transparent;
+        }
+        
+        
+        
+		.nav-items {
+		  float: left;
+		  height: 0px;
+		  padding:0px;
+		  margin:0px;
+		  
+		}
+		.nav-items li{
+		  width: 100%;
+		 
+		}  
+	}
+	.nav-open{
+          
+		height: auto;
+	}
+    .dropdown-content {display:none;
+    position: absolute;
+    height:300px;
+     z-index:111111111;
+    width: 125px;
+        font-size:11px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  */
+    padding: 1px 1px;
+        top:70px;
+        box-sizing: border-box;
+    }
+    
+    .dropdown-content ul li{
+       
+        list-style-type: none;
+        margin-left:-25px;
+        padding-top:10px;
+        background-color: #262525;
+        padding:10px;
+        border-bottom:1px solid white;
+        margin-left:-40px;
+        transition: all 2s;
+    }
+    
+   #homes:hover  .dropdown-content {
+   display:block;
+	}  
+    
+    @media screen and (max-width:768px){
+           
+        
+        .dropdown-content {display:none;}
+          li a {opacity: 1;}
+    
+     #homes:hover  .dropdown-content {
+   display:none;
+	} 
+         }
+ 
+    #myCarousel{
+        cursor:pointer;
+    }
+    
+     @media screen and (max-width:800px){
+          ul li a{
+              display:none;
+          }
+      }       
+</style>
+</head>
+<body>
+    
+<header>
+ <nav class="nav-bar">
+  <div class="nav-hold">
+    <div class="nav-logo">
+      <a href="#">My Logo</a>
+    </div>
+    <div class="nav-menu" id="nav"><h3>&#9776;</h3></div>
+		<ul class="nav-items">
+            <li ><a  href="#" style="opacity:0.9">Home</a>
+            </li>
+            <li id="homes"><a href="paintings.html">paintings</a>
+            
+    <div class="dropdown-content" style="color:white">
+  <ul>
+      <li><a href="paintings_2.html#year2015">year 2015</a></li>
+      <li><a href="#">year 2016</a></li>
+      <li><a href="#">year 2017</a></li>
+      
+      <li><a href="#">masterpiece 1</a></li>
+      <li><a href="#">masterpiece 2</a></li>
+        </ul>
+  
+   </div>
+            </li>
+
+            
+            <li><a href="#">About me</a></li>
+             <li><a href="#">Videos</a></li>
+            <li><a href="#">store</a></li>
+            <li id="social"><a href="#"><img src="twitter.png" width="25px" height="25px" style="display:block"></a>
+                <a href="#"><img src="youtube.png" width="30px" height="30px" style="display:block"></a>
+                <a href="#"><img src="facebook.jpg" width="25px" height="25px" style="display:block;margin-left:2px"></a>
+            </li>
+        </ul>
+  </div>
+</nav>
+    
+<div class="main-content">
+</div>
+  <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" >
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+   <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <div class="image1"></div>
+    </div>
+    <div class="item">
+      <div class="image2"></div>
+    </div>
+    <div class="item">
+      <div class="image1"></div>
+    </div>
+    <div class="item">
+      <div class="image2"></div>
+    </div>
+  </div>
+
+    <!-- Left and right controls -->
+    <a class="left " href="#myCarousel" role="button" data-slide="prev" >
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="width:100%">
+      <span class="" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+    <div id="block" style="position:fixed;top:0px;width:100%;height:10000px;margin-left:100%;background:#292828;z-index:5555555555;transition-duration:0.6s;color:white">
+     <div class="nav-menu" id="nav2" style="float:right;padding-right:50px;color:white"><h3>&#9747;</h3></div>
+ 
+    </div>
+    
+    
+
+    <script src="jquery-3.1.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+    
+  $(function(){      
+        
+$(window).resize(function() {
+  $('.item > .image1').css('height', $(window).height());
+    $('.item > .image2').css('height', $(window).height());
+}).trigger('resize');
+        
+        
+  $('.myCarousel').carousel({
+  interval: 4000, // in milliseconds
+  pause: 'none' // set to 'true' to pause slider on mouse hover
+})  ;  
+		
+		  var n= "#nav";
+		  var no = ".nav-items";
+		  $(n).click(function(){
+			 if($(no).hasClass("nav-open")){
+			   $(no).animate({height:0},300);
+			   	setTimeout(function(){
+				$(no).removeAttr('style').removeClass("nav-open");
+			   },320);
+			 }else{
+			   var h = $(no).css("height","auto").height();
+			   $(no).height(0).animate({height:h},300);
+			   setTimeout(function(){
+				$(no).removeAttr('style').addClass("nav-open");
+			   },320);
+			 }
+		  });
+      
+       $('.nav-menu').click(function(){
+    $('#block').css({'margin-left':'0px'});
+    })
+
+  $('#nav2').click(function(){
+       $('#block').css({'margin-left':'100%'});
+	   });
+		});      
+        
+  
+    
+</script>
+
+
+<body>
+</html>

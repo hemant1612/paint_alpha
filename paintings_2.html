@@ -1,0 +1,481 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css">
+    <link rel="stylesheet" src="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+  
+  
+
+    @media screen and (min-width:768px){
+        body{padding:0;overflow-x:hidden;}
+        .nav-bar{background:white;}
+    
+    
+    }
+
+  a  img{
+        max-width:100%;
+        max-height:100%;
+        box-sizing:border-box;
+    }
+    
+    
+    .nav-items li{
+        height:auto;
+    }
+    
+    
+ .slider {
+        width: 90%;
+        margin-top: 90px ;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .slick-slide {
+      margin: 0px -23px;
+    }
+
+    .slick-slide img {
+      width: 95%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        color: black;
+    }
+      @media screen and (max-width:768px){
+          .slider{
+              display:none;
+          }
+      }     
+	  
+	  
+   
+	body{
+	  font-family: Verdana, Geneva, sans sarif;
+        font-family:"Lora";
+	}
+	a{
+	  text-decoration:none;
+	}
+	.nav-bar{
+	 position:relative;top:0px;
+        z-index:33;
+	  width: 100%;
+	}
+	.nav-hold{
+	  display:block;
+	  width: 90%;
+	}
+	.nav-logo{
+	  float: left;
+	  display: block;
+	  padding: 30px 0px 20px 20px;
+	  font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+    
+	}
+	.nav-logo a{
+	  color: #1c1c1c;
+        
+	}
+	.nav-items{
+	  float: right;
+        
+	}
+	.nav-items >li{
+	  display:block;
+	  float: left;
+	  padding: 30px 0px 20px 20px;
+	  margin-left:10px;
+     text-transform: uppercase;
+	}
+	.nav-items >li a {
+     background:#262525;       
+     padding:5px;
+     color: white;
+     font-weight:1000;
+      opacity:0.4;
+	}
+	.nav-items li a:hover {
+	  opacity:0.9;
+   text-decoration:none;
+        font-weight:1000;
+	}
+   
+    .nav-items li a:visited{
+	  opacity:0.9;
+   text-decoration:none;
+        font-weight:1000;
+	}
+	.nav-hold{
+	  overflow:hidden;
+	}
+	.nav-menu{
+       
+       padding:5px;
+        float:right;
+       display:none;
+	}
+	/*media Queries*/
+	
+	.nav-open{
+          
+		height: auto;
+	}
+    .dropdown-content {display:none;
+    position: absolute;
+    
+    z-index:111111111;
+    width: 125px;
+    font-size:11px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  */
+    padding: 1px 1px;
+        top:70px;
+        box-sizing: border-box;
+    }
+    
+    .dropdown-content ul li{
+        list-style-type: none;
+        height:30px;
+        margin-left:-25px;
+        padding-top:10px;
+        background-color: #262525;
+        padding:10px;
+        border-bottom:1px solid white;
+        margin-left:-40px;
+        transition: all 2s;
+    }
+    
+   #homes:hover  .dropdown-content {
+   display:block;
+	}    
+    @media screen and (max-width:768px){
+        .nav-menu{display:block;
+       }
+        .nav-items li a {
+   display:none; 
+
+	}
+        .nav-bar{ 
+        background:white;
+      
+        }
+        .container
+        {
+            margin-top:80px;
+        }
+        .dropdown-content ul li{display:none;}
+    body{
+        padding:0;
+    margin:0;overflow-y:scroll;
+        overflow-x:hidden;
+    }
+  
+         
+    } 
+    
+    
+  h5,h3{
+        color:#797979;
+    text-transform: capitalize;}
+        
+   a{
+        text-decoration:none;
+    }  
+    
+    @media screen and (max-width:500px){
+        .nav-bar{
+            height:60px;
+         }
+        
+    }
+    
+   
+ /*   .about p[id^=i]{
+        text-indent: 10px;
+    
+    }
+    
+   */
+    h5 a{ margin-left:6%;
+        text-decoration:none!important;
+        color:#a7a6a6;
+  }
+    
+    
+    .container img{
+        opacity:1;
+        
+    }
+    .container img:hover{
+        opacity:0.9;
+        transform:scale(1.02);
+        transition-duration: 1s;
+         box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</style>
+</head>
+<body>
+    
+<header>
+ <nav class="nav-bar">
+  <div class="nav-hold">
+    <div class="nav-logo">
+      <a href="#">My Logo</a>
+    </div>
+    <div class="nav-menu" id="nav"><h3>&#9776;</h3></div>
+		<ul class="nav-items" id="nav-items">
+      <li><a  href="index.html" style="opacity:0.9">Home</a>
+      </li>
+      <li id="homes"><a href="#">paintings</a>
+      <div class="dropdown-content" style="color:white">
+      <ul>
+     
+      <li><a href="#">year 2015</a></li>
+      <li><a href="#">year 2016</a></li>
+      <li><a href="#">year 2017</a></li>
+      <li><a href="#">masterpiece 1</a></li>
+      <li><a href="#">masterpiece 2</a></li>
+        </ul>
+       </div>
+        </li>
+        <li><a href="#">About me</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">store</a></li>
+        </ul>
+  </div>
+</nav>
+    
+  
+  <div class="container" style="color:#8e8e8e">
+<h4>PAINTINGS</h4>
+
+<hr/>
+<P style="font-size:12px">collection 2016</P>
+    
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+       <a target="_blank" href="http://wallpapercave.com/wp/E0z7vJl.jpg">
+          <img src="http://wallpapercave.com/wp/E0z7vJl.jpg" alt="Lights" style="width:100%">
+           </a>
+          <div class="caption" >
+            <p>painting 1 theme of the painting</p>
+          </div>
+          
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+       
+          <img src="http://wallpapercave.com/wp/E0z7vJl.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+      
+      </div>
+    </div>
+   <div class="col-md-4">
+      <div class="thumbnail">
+        
+          <img src="http://wallpapercave.com/wp/E0z7vJl.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+      </br>
+    <p style="font-size:12px">collection 2017</p>
+      <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+       
+          <img src="http://wallpapercave.com/wp/E0z7vJl.jpg" alt="Lights" style="width:100%">
+          <div class="caption" >
+            <p>painting 1 theme of the painting</p>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+       
+          <img src="http://wallpapercave.com/wp/E0z7vJl.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+      
+      </div>
+    </div>
+   <div class="col-md-4">
+      <div class="thumbnail">
+        
+          <img src="http://wallpapercave.com/wp/E0z7vJl.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+         
+    </br>
+      <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+       
+          <img src="http://wallpapercave.com/wp/E0z7vJl.jpg" alt="Lights" style="width:100%">
+         
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+       
+          <img src="http://wallpapercave.com/wp/E0z7vJl.jpg" alt="Lights" style="width:100%">
+         
+      
+      </div>
+    </div>
+   <div class="col-md-4">
+      <div class="thumbnail">
+        
+          <img src="http://wallpapercave.com/wp/E0z7vJl.jpg" alt="Lights" style="width:100%">
+         
+        
+      </div>
+    </div>
+  </div>
+       
+<div id="block" style="position:absolute;top:0px;width:100%;height:auto;margin-left:110%;background:#292828;z-index:5555555555;transition-duration:0.6s;color:white">
+     <div class="nav-menu" id="nav2" style="float:right;padding-right:50px" ><h3>&#9747;</h3></div>
+    
+    
+    
+
+     <div  style="color:white; float: left;
+	  display: block;
+	  padding: 30px 0px 20px 20px;
+	  font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none">
+      My Logo
+    </div>
+     <div id="block-contents" style="color:white;list-style-type:none">
+   <ul style="margin-top:100px;list-style-type:none;">
+        <li>PAINTINGS</li>
+         </BR> 
+         <UL style="list-style-type:none">
+             <li>  <a href="#">2015</a></li></br>
+       <li> <a href="#"> 2016</li></a></br>
+
+       <li> <a href="#"> 2017</li></a></br>
+
+             </UL>
+       </BR>
+       <li>SKETCH</li>
+       </BR>
+<UL style="list-style-type:none">
+   <li><a href="#">SKETCH 1</a></li>
+        
+     </BR>
+        
+        <li><a href="#">SKETCH 2</a></li>
+</BR>
+ <li><a href="#">SKETCH 3</a></li>
+</br>
+<li><a href="#">SKETCH 4</a></li></br>
+</UL>
+
+</br>
+
+
+        <li>VIDEOS</li>
+         </BR>
+        <li>ABOUT ME</li>
+</BR>
+        
+        <li>STORE</li>
+     </ul>
+</br>
+  </br>  
+</br></br> </br>  
+</br></br> </br>  
+</br></br>
+    </div>
+    </div>
+ 
+<!-- for mobile devices -->
+    
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>
+    </script>
+    <script>
+         $(document).on('ready', function() {
+    $('.nav-menu').click(function(){
+    $('#block').css({'margin-left':'0px'});
+        $('.row').fadeOut();
+    })
+
+  $('#nav2').click(function(){
+       $('#block').css({'margin-left':'100%'});
+      $('.row').fadeIn("slow");
+	   });
+     
+ 
+    
+      $(".variable").slick({
+        dots: false,
+        infinite: true,
+        variableWidth: true,
+          autoplay:true,
+          
+      });
+                         
+             
+             
+             
+	   });
+     
+  
+ 
+</script>
+
+
+<body>
+</html>
