@@ -8,7 +8,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
-
 .carousel-fade .carousel-inner .item {
 	opacity: 0;
 	-webkit-transition-property: opacity;
@@ -52,8 +51,6 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-
-
  .image2 {
   background-image: url("http://wallpapercave.com/wp/E0z7vJl.jpg");
   background-size: cover;
@@ -64,16 +61,16 @@
     }
     .carousel-control:active{background:transparent;}
     .carousel-control:hover{background:transparent;}
-
     #myCarousel{
       
     }
    *{
   	box-sizing: border-box;
   	-moz-box-sizing: border-box;
+       -webkit-box-sizing:border-box;
 	}
 	body{
-	  font-family: Verdana, Geneva, sans sarif;
+	 
 	}
 	a{
 	  text-decoration:none;
@@ -96,7 +93,7 @@
         text-decoration: none;
 	}
 	.nav-logo a{
-	  color: #1c1c1c;
+	  color: #a8a8a8;
         
 	}
 	.nav-items{
@@ -109,14 +106,7 @@
 	  margin-left:10px;
      text-transform: uppercase;
 	}
-	.nav-items li a:first-of-type {
-     background:#262525;       
-     padding:5px;
-     color: white;
-     font-weight:1000;
-      opacity:0.4;
-	}
-    
+	
    #social  a{
        
         background:none;       
@@ -129,12 +119,14 @@ opacity:0.6;
     }
     #social  img:hover{
     transform: scale(1.02);
-opacity:1;
+opacity:1 !important;
     }
-    
+    li>a{color:#808080;text-decoration: none;}
     
 	.nav-items li a:hover {
-	  opacity:0.9;
+	  opacity:1;
+        color:#035d22;
+        transition-duration: 1s;
    text-decoration:none;
         font-weight:1000;
 	}
@@ -218,16 +210,34 @@ opacity:1;
         list-style-type: none;
         margin-left:-25px;
         padding-top:10px;
-        background-color: #262525;
+        
         padding:10px;
-        border-bottom:1px solid white;
         margin-left:-40px;
         transition: all 2s;
     }
     
-   #homes:hover  .dropdown-content {
-   display:block;
+   #homes:hover  .dropdown-content{
+display:block;
+      animation:show 2s 0.5;
+       
 	}  
+
+    
+    @keyframes show{
+    from{
+     opacity:0;
+            }
+        to{
+           
+               opacity:1;
+        }
+            
+            
+    
+    }
+    
+    
+    
     
     @media screen and (max-width:768px){
            
@@ -245,7 +255,7 @@ opacity:1;
     }
     
      @media screen and (max-width:800px){
-          ul li a{
+        .nav-bar  ul li a{
               display:none;
           }
       }       
@@ -264,27 +274,21 @@ opacity:1;
             <li ><a  href="#" style="opacity:0.9">Home</a>
             </li>
             <li id="homes"><a href="paintings.html">paintings</a>
-            
     <div class="dropdown-content" style="color:white">
   <ul>
       <li><a href="paintings_2.html#year2015">year 2015</a></li>
-      <li><a href="#">year 2016</a></li>
-      <li><a href="#">year 2017</a></li>
-      
-      <li><a href="#">masterpiece 1</a></li>
-      <li><a href="#">masterpiece 2</a></li>
+      <li><a href="paintings_2.html">year 2016</a></li>
+      <li><a href="paintings_2.html">year 2017</a></li>
+
         </ul>
-  
    </div>
             </li>
-
-            
-            <li><a href="#">About me</a></li>
-             <li><a href="#">Videos</a></li>
-            <li><a href="#">store</a></li>
-            <li id="social"><a href="#"><img src="twitter.png" width="25px" height="25px" style="display:block"></a>
-                <a href="#"><img src="youtube.png" width="30px" height="30px" style="display:block"></a>
-                <a href="#"><img src="facebook.jpg" width="25px" height="25px" style="display:block;margin-left:2px"></a>
+            <li><a href="about.html">About me</a></li>
+             <li><a href="video.html">Videos</a></li>
+            <li><a href="store.html">store</a></li>
+             <li id="social"><a href="https://www.twitter.com"><img src="twitter.png" width="25px" height="20px" style="position:fixed;left:95%"></a>
+                <a href="https://www.youtube.com"><img src="youtube.png" width="30px" height="30px" style="position:fixed;left:95%;margin-top:21px"></a>
+                <a href="https://www.facebook.com"><img src="facebook.jpg" width="25px" height="25px" style="display:block;position:fixed;left:95%;margin-left:2px;margin-top:50px"></a>
             </li>
         </ul>
   </div>
@@ -318,7 +322,7 @@ opacity:1;
 
     <!-- Left and right controls -->
     <a class="left " href="#myCarousel" role="button" data-slide="prev" >
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
     <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="width:100%">
@@ -327,11 +331,67 @@ opacity:1;
     </a>
   </div>
 </div>
-    <div id="block" style="position:fixed;top:0px;width:100%;height:10000px;margin-left:100%;background:#292828;z-index:5555555555;transition-duration:0.6s;color:white">
+   <div id="block" style="position:fixed;top:0px;width:100%;height:auto;margin-left:100%;background:#292828;z-index:5555555555;overflow-y:visible;transition-duration:0.6s;color:white">
      <div class="nav-menu" id="nav2" style="float:right;padding-right:50px;color:white"><h3>&#9747;</h3></div>
- 
-    </div>
     
+    
+    
+
+     <div  style="color:white; float: left;
+	  display: block;
+	  padding: 30px 0px 20px 20px;
+	  font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none">
+      My Logo
+    </div>
+     <div id="block-contents" style="color:white;list-style-type:none">
+   <ul style="margin-top:100px;list-style-type:none;">
+        <li>PAINTINGS</li>
+         </BR> 
+         <ul style="list-style-type:none">
+             <li>  <a href="paintings_2.html" >2015</a></li></br>
+       <li> <a href="paintings_2.html"> 2016</li></a></br>
+
+       <li> <a href="paintings_2.html"> 2017</li></a></br>
+
+             </ul>
+       </BR>
+       <li>SKETCH</li>
+       </BR>
+<UL style="list-style-type:none">
+   <li><a href="paintings.html">SKETCH 1</a></li>
+        
+     </BR>
+        
+        <li><a href="paintings.html">SKETCH 2</a></li>
+</BR>
+ <li><a href="paintings.html">SKETCH 3</a></li>
+</br>
+<li><a href="paintings.html">SKETCH 4</a></li></br>
+</UL>
+
+</br>
+
+
+        <li><a href="video.html">VIDEOS</a></li>
+         </BR>
+        <li><a href="about.html">ABOUT ME</a></li>
+</BR>
+        
+        <li><a href="store.html">STORE</a></li>
+
+
+</br>
+<li><a href="https://www.twitter.com"><img src="t.jpg" width="30px";height="30px"></a>
+<a href="https://www.twitter.com"><img src="f.jpg" width="30px";height="30px"></a>
+<a href="https://www.twitter.com"><img src="y.jpg" width="30px";height="30px"></a></li>
+</br></br></br></br>
+     </ul>
+    
+    
+    </div>
+    </div>
     
 
     <script src="jquery-3.1.1.js"></script>
@@ -370,10 +430,15 @@ $(window).resize(function() {
       
        $('.nav-menu').click(function(){
     $('#block').css({'margin-left':'0px'});
+               $('#myCarousel').fadeOut("slow");
+           $('#block').css({'position':'absolute'})
+            $('html').css({'overflow-y':'scroll'})
     })
-
   $('#nav2').click(function(){
        $('#block').css({'margin-left':'100%'});
+          $('#myCarousel').fadeIn("slow");
+       $('#block').css({'position':'fixed'})
+       $('html').css({'overflow-y':'hidden'})
 	   });
 		});      
         

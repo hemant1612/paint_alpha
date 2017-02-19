@@ -13,9 +13,11 @@
     @media screen and (min-height:1000px){
              body{padding:0;
     margin:0;overflow:hidden;}
-    *{       height:100%;
+    *{     
       box-sizing: border-box;
     }
+	    }
+
     html
 {
 	height: 100%;
@@ -24,14 +26,32 @@
   overflow-x:hidden;
   overflow-y:hidden;
 }
-    }
-    
-  
+        
+        .container{display:none;}
+        body{height:100%;
+        overflow:hidden;}
+        
+    @media screen and (max-width:768px){
+body{overflow-x:hidden !important;
+    overflow-y:scroll !important;}
+
+}
+	
+    html
+{
+	height: 100%;
+    	margin: 0;
+	height: 100%;
+  overflow-x:hidden;
+overflow-y:scroll;
+}  
+
 
     @media screen and (min-width:768px){
     body{padding:0;overflow:hidden;
-    margin:0;
-    }
+    margin:0;  }
+        .container{display:none;}
+  
     }
 
   a  img{
@@ -65,13 +85,16 @@
     .slick-next:before {
         color: black;
     }
-      @media screen and (max-width:768px){
+      @media only screen and (max-width:768px){
           .slider{
               display:none;
           }
+         
       }     
 	  
-	  
+    @media screen and (min-height:1024px) and (max-width:768px){
+        .container{display:block;}
+    }  
    
 	body{
 	  font-family: Verdana, Geneva, sans sarif;
@@ -113,9 +136,9 @@
      text-transform: uppercase;
 	}
 	.nav-items >li a {
-     background:#262525;       
+     background:transparent;       
      padding:5px;
-     color: white;
+     color: #464646;
      font-weight:1000;
       opacity:0.4;
 	}
@@ -162,16 +185,32 @@
         height:30px;
         margin-left:-25px;
         padding-top:10px;
-        background-color: #262525;
+        background-color:transparent;
         padding:10px;
-        border-bottom:1px solid white;
+   
         margin-left:-40px;
         transition: all 2s;
     }
     
-   #homes:hover  .dropdown-content {
-   display:block;
-	}    
+ #homes:hover  .dropdown-content{
+display:block;
+     
+       
+	}  
+
+    
+    @keyframes show{
+    from{
+     opacity:0;
+            }
+        to{
+           
+               opacity:1;
+        }
+            
+            
+    
+    }
     @media screen and (max-width:768px){
         .nav-menu{display:block;
        }
@@ -214,9 +253,22 @@
         }
         
     }
-    
-    
-    
+
+   #social  a{
+       
+             
+     padding:0px; 
+    }
+     
+   #social  img{
+              
+opacity:0.6;
+    }
+    #social  img:hover{
+    transform: scale(1.02);
+opacity:1 !important;
+    }
+       
     
     
 </style>
@@ -236,24 +288,29 @@
       <li id="homes"><a href="#">paintings</a>
       <div class="dropdown-content" style="color:white">
       <ul>
-      <li><a href="#">year 2014</a></li>
-      <li><a href="#">year 2015</a></li>
-      <li><a href="#">year 2016</a></li>
-      <li><a href="#">year 2017</a></li>
-      <li><a href="#">masterpiece 1</a></li>
-      <li><a href="#">masterpiece 2</a></li>
+      <li><a href="paintings_2.html">year 2014</a></li>
+      <li><a href="paintings_2.html">year 2015</a></li>
+      <li><a href="paintings_2.html">year 2016</a></li>
+      <li><a href="paintings_2.html">year 2017</a></li>
+      <li><a href="paintings_2.html">masterpiece 1</a></li>
+      <li><a href="paintings_2.html">masterpiece 2</a></li>
         </ul>
        </div>
         </li>
-        <li><a href="#">About me</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#">store</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="video.html">Videos</a></li>
+        <li><a href="store.html">store</a></li>
+               <li id="social"><a href="https://www.twitter.com"><img src="twitter.png" width="25px" height="20px" style="position:fixed;left:95%;"></a>
+                     <a href="#"><img src="facebook.jpg" width="25px" height="25px" style="position:fixed;left:95%;margin-left:2px;margin-top:24px"></a>
+                <a href="#"><img src="youtube.png" width="30px" height="30px" style="position:fixed;left:95%;margin-top:50px"></a>
+              
+            </li>
         </ul>
   </div>
 </nav>
     
 
-<div id="block" style="position:absolute;top:0px;width:100%;height:auto;margin-left:100%;background:#292828;z-index:5555555555;transition-duration:0.6s;color:white">
+<div id="block" style="position:fixed;top:0px;width:100%;height:auto;margin-left:100%;background:#292828;z-index:5555555555;transition-duration:0.6s;color:white">
      <div class="nav-menu" id="nav2" style="float:right;padding-right:50px" ><h3>&#9747;</h3></div>
     
     
@@ -271,37 +328,44 @@
    <ul style="margin-top:100px;list-style-type:none;">
         <li>PAINTINGS</li>
          </BR> 
-         <UL style="list-style-type:none">
-             <li>  <a href="#">2015</a></li></br>
-       <li> <a href="#"> 2016</li></a></br>
+         <ul style="list-style-type:none">
+             <li>  <a href="paintings_2.html" >2015</a></li></br>
+       <li> <a href="paintings_2.html"> 2016</li></a></br>
 
-       <li> <a href="#"> 2017</li></a></br>
+       <li> <a href="paintings_2.html"> 2017</li></a></br>
 
-             </UL>
+             </ul>
        </BR>
        <li>SKETCH</li>
        </BR>
 <UL style="list-style-type:none">
-   <li><a href="#">SKETCH 1</a></li>
+   <li><a href="paintings.html">SKETCH 1</a></li>
         
      </BR>
         
-        <li><a href="#">SKETCH 2</a></li>
+        <li><a href="paintings.html">SKETCH 2</a></li>
 </BR>
- <li><a href="#">SKETCH 3</a></li>
+ <li><a href="paintings.html">SKETCH 3</a></li>
 </br>
-<li><a href="#">SKETCH 4</a></li></br>
+<li><a href="paintings.html">SKETCH 4</a></li></br>
 </UL>
 
 </br>
 
 
-        <li>VIDEOS</li>
+        <li><a href="video.html">VIDEOS</a></li>
          </BR>
-        <li>ABOUT ME</li>
+        <li><a href="about.html">ABOUT ME</a></li>
 </BR>
         
-        <li>STORE</li>
+        <li><a href="store.html">STORE</a></li>
+
+
+</br>
+<li><a href="https://www.twitter.com"><img src="t.jpg" width="30px";height="30px"></a>
+<a href="https://www.twitter.com"><img src="f.jpg" width="30px";height="30px"></a>
+<a href="https://www.twitter.com"><img src="y.jpg" width="30px";height="30px"></a></li>
+</br></br></br></br>
      </ul>
     
     
@@ -416,14 +480,25 @@
     </script>
     <script>
          $(document).on('ready', function() {
+         $(window).resize(function(){
+             if(window.innerWidth<=768){
+                 $('.container').show();
+             }
+         }).trigger('resize');    
+              
+      
+ 
+             
     $('.nav-menu').click(function(){
     $('#block').css({'margin-left':'0px'});
         $('.container').fadeOut();
+         $('#block').css({'position':'absolute'})
     })
 
   $('#nav2').click(function(){
        $('#block').css({'margin-left':'100%'});
       $('.container').fadeIn("slow");
+       $('#block').css({'position':'fixed'})
 	   });
      
  
@@ -435,14 +510,15 @@
           autoplay:true,
           
       });
-                         
-             
-             
-             
-	   });
-     
-  
+    
+	 
  
+      
+    if((window.innerHeight>=1024 && window.innderWidth<=1366)){
+        $('.container').hide();
+    }
+          
+       });  
 </script>
 
 

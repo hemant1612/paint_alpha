@@ -1,7 +1,8 @@
+
 <!DOCTYPE HTML>
 <html>
 <head>
-        <meta charset="utf-8">
+ <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css">
@@ -10,18 +11,33 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
-  
-
-  
     
+    body{ font-family: Verdana, Geneva, sans sarif;}
+    @media screen and (min-height:1000px){
+             body{padding:0;
+    margin:0;overflow:hidden;}
+    *{       
+      
+    }
+    html
+{
+	height: 100%;
+    	margin: 0;
+	height: 100%;
+  overflow-x:hidden;
+  overflow-y:hidden;
+}
+    }
     @media screen and (min-width:768px){
         body{padding:0;overflow-x:hidden;}
         .nav-bar{background:white;}
-        #block{display:none;}
-    
     }
 
- 
+  a  img{
+        max-width:100%;
+        max-height:100%;
+        box-sizing:border-box;
+    }
     
     
     .nav-items li{
@@ -29,6 +45,30 @@
     }
     
     
+ .slider {
+        width: 90%;
+        margin-top: 90px ;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .slick-slide {
+      margin: 0px -23px;
+    }
+
+    .slick-slide img {
+      width: 95%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        color: black;
+    }
+      @media screen and (max-width:768px){
+          .slider{
+              display:none;
+          }
+      }     
 	  
 	  
    
@@ -69,13 +109,13 @@
 	  display:block;
 	  float: left;
 	  padding: 30px 0px 20px 20px;
-	  margin-left:-10px;
+	  margin-left:10px;
      text-transform: uppercase;
 	}
 	.nav-items >li a {
      background:transparent;       
      padding:5px;
-     color: #464646;
+     color:#464646;
      font-weight:1000;
       opacity:0.4;
 	}
@@ -124,11 +164,10 @@
         padding-top:10px;
         background-color: transparent;
         padding:10px;
-      
+        border-bottom:1px solid white;
         margin-left:-40px;
         transition: all 2s;
     }
-    
    #homes:hover  .dropdown-content{
 display:block;
       animation:show 2s 0.5;
@@ -147,7 +186,11 @@ display:block;
             
             
     
-    }    
+    }
+    
+    
+    @media screen and (max-width:768px){
+           
     @media screen and (max-width:768px){
         .nav-menu{display:block;
        }
@@ -155,7 +198,6 @@ display:block;
    display:none; 
 
 	}
-   
         .nav-bar{ 
         background:white;
       
@@ -175,11 +217,11 @@ display:block;
     } 
     
     
-  h5,h3{
+    .container p,h4{
         color:#797979;
-    text-transform: capitalize;}
+    text-transform: uppercase;}
         
-   a{
+   .caption a, #block-contents ul li a{
         text-decoration:none;
     }  
     
@@ -197,9 +239,7 @@ display:block;
     }
     
    */
-    h5 a{ margin-left:6%;
-        text-decoration:none!important;
-        color:#a7a6a6;
+    .i{ margin-left:1%;
   }
     
 </style>
@@ -219,57 +259,35 @@ display:block;
       <li id="homes"><a href="paintings.html">paintings</a>
       <div class="dropdown-content" style="color:white">
       <ul>
-  
+     
       <li><a href="paintings_2.html">year 2015</a></li>
       <li><a href="paintings_2.html">year 2016</a></li>
       <li><a href="paintings_2.html">year 2017</a></li>
       <li><a href="paintings_2.html">masterpiece 1</a></li>
       <li><a href="paintings_2.html">masterpiece 2</a></li>
+          
         </ul>
        </div>
         </li>
-        <li><a href="about.html">About me</a></li>
-        <li><a href="video.html">Videos</a></li>
-        <li><a href="store.html">store</a></li>
-            
-             <li id="social"><a href="https://www.twitter.com"><img src="twitter.png" width="25px" height="20px" style="position:fixed;left:95%"></a>
-                <a href="#"><img src="youtube.png" width="30px" height="30px" style="position:fixed;left:95%;margin-top:21px"></a>
-                <a href="#"><img src="facebook.jpg" width="25px" height="25px" style="display:block;position:fixed;left:95%;margin-left:3px;margin-top:34px"></a>
+      
+            <li><a href="about.html">About me</a></li>
+             <li><a href="video.html">Videos</a></li>
+            <li><a href="store.html">store</a></li>
+              <li id="social"><a href="https://www.twitter.com"><img src="twitter.png" width="25px" height="20px" style="position:fixed;left:95%"></a>
+                <a href="https://www.twitter.com"><img src="youtube.png" width="30px" height="30px" style="position:fixed;left:95%;margin-top:50px"></a>
+                <a href="https://www.twitter.com"><img src="facebook.jpg" width="25px" height="25px" style="display:block;position:fixed;left:95%;margin-left:2px;margin-top:7px"></a>
             </li>
+        </ul>
         </ul>
   </div>
 </nav>
+      <div class="row">  
+        <div class="col-sm-3 col-sm-offset-5 col-xs-offset-3">
+<div class="element" style="color:#898989;margin-top:30vh">COMING SOON</div>
    
-<h3 style="color:#a7a6a6;margin-left:9.7vw">MAKING A SKETCH</h3>
-    <div class="row">
- <div class="col-md-7 col-md-offset-1" style="margin-top:20px">
-       
-      <div class="thumbnail">
-<div class="embed-responsive embed-responsive-16by9" >
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/XGSy3_Czz8" ></iframe>
-</div>
-          
-          <div class="caption" >
-          
-          </div>
-      </div>
+    </div> 
     </div>
-        
-   <div class="col-md-2 col-md-offset-1" style="margin-top:20px">      
-        <h3 style="margin:10px">other videos</h3>
-        </br>
-      <h5><a href="#">video link 1</a></h5> 
-        </br>
-       <h5><a href="#">coming soon </a></h5> 
-        
-    </div>
-    
-    </div>
-    
-    
-    
-
-    
+   
 <div id="block" style="position:absolute;top:0px;width:100%;height:auto;margin-left:100%;background:#292828;z-index:5555555555;transition-duration:0.6s;color:white">
      <div class="nav-menu" id="nav2" style="float:right;padding-right:50px" ><h3>&#9747;</h3></div>
     
@@ -284,7 +302,7 @@ display:block;
         text-decoration: none">
       My Logo
     </div>
-     <div id="block-contents" style="color:white;list-style-type:none">
+    <div id="block-contents" style="color:white;list-style-type:none">
    <ul style="margin-top:100px;list-style-type:none;">
         <li>PAINTINGS</li>
          </BR> 
@@ -339,32 +357,44 @@ display:block;
     
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>
+<script src="https://cdn.rawgit.com/karbachinsky/jquery-DotAnimation/master/jquery.dotanimation.min.js"></script>
+
     </script>
     <script>
          $(document).on('ready', function() {
     $('.nav-menu').click(function(){
     $('#block').css({'margin-left':'0px'});
-        $('.row').fadeOut();
+        $('.about').fadeOut();
     })
 
   $('#nav2').click(function(){
        $('#block').css({'margin-left':'100%'});
-      $('.row').fadeIn("slow");
+      $('.about').fadeIn("slow");
 	   });
-     
- 
-    
-      $(".variable").slick({
-        dots: false,
-        infinite: true,
-        variableWidth: true,
-          autoplay:true,
-          
-      });
-                         
-       
+  var $el = $('.element');
+
+    $el.dotAnimation({
+        speed: 500,
+        
+        dotElement: '.',
+           
+  
              
 	   });
+
+ 
+    
+     
+      });
+                         
+      
+
+  
+
+              
+             
+             
+
      
   
  
